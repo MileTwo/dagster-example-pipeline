@@ -1,0 +1,4 @@
+resources:
+  hacker_news:
+    config:
+      endpoint: https://hacker-news.firebaseio.com/v0/

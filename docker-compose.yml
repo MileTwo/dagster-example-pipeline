@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  dagsterdev:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    image: dagster-example-pipeline-dev
+    ports: 
+      - "3000:3000"
+    # environment:
+    #   SLACK_HOOK: "https://hooks.slack.com/services/YOUR/WEBHOOK/URL"
+    volumes:
+      - ./:/usr/src/app
+
