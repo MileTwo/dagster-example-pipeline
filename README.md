@@ -1,5 +1,3 @@
-[[_TOC_]] 
-
 # Dagster Pipeline Example
 
 A boilerplate for creating data pipelines using Dagster, Docker, and Poetry. To use this repo, fork it and follow the instructions below
