@@ -2,7 +2,7 @@
 
 > *Technical blog post coming soon™!*
 
-A boilerplate for creating data pipelines using Dagster, Docker, and Poetry. To use this repo, fork it or click "[Use this template](https://github.com/MileTwo/dagster-example-pipeline/generate)" and follow the instructions below
+A boilerplate for creating data pipelines using Dagster, Docker, and Poetry. To use this repo, clone it or click "[Use this template](https://github.com/MileTwo/dagster-example-pipeline/generate)" and follow the instructions below
 ## Features
 * **Picks up code changes immediately** (just hit `Reload` in dagit; don't have to restart the container!)
 * **Unified Dockerfile for development & deployment; easily integrates with CI/CD processes**
