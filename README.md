@@ -85,3 +85,16 @@ I leave this as an exercise for the reader and/or the reader's DevOps team :) Th
 * Use semantic versioning to version-bump `pyproject.toml` and associate this with the container version
 * You don't need to target a specific stage in the Dockerfile; the end result is a Dagster User Code Deployment in a ready-to-use container
 * If using helm, make sure you've added the correct container version to the list of User Code Deployments; don't forget to apply any secrets/env vars as needed
+
+## How Can I Debug My Op (or other functions)
+Use `debugpy` (already installed). In `docker-compose.yml`, add `- "5678:5678"` to the list of ports. In the actual op you'd like to debug, add the following three lines:
+``` python
+# It's very important that we specify both address and port!
+debugpy.listen(('0.0.0.0', 5678))
+# Block until you can attach the debugger in VSCode
+debugpy.wait_for_client()
+# Add this final line wherever you'd like within the op
+debugpy.breakpoint()
+```
+
+Finally, you’ll need to create a `launch.json` for python remote attach. In VSCode, click “Run and Debug” -> “Create a launch.json file” and follow the prompts ( python -> remote attach -> localhost -> 5678 )
