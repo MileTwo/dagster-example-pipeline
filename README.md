@@ -51,6 +51,17 @@ poetry shell
 dagit -w workspace.yaml
 ```
 
+## Running Tests Locally
+
+> *I'll be honest, I haven't focused on testing with this repo. Suggestions for improvement are welcome :)*
+
+Assuming poetry is installed and the environment created, run the following from the project root:
+
+``` bash
+poetry shell
+pytest 
+```
+
 # FAQ
 ## During Development, When Should I Rebuild/Restart the Docker Container?
 If you change any env vars or files that are **outside of `job_configs` or `src`**, then you'll want to rebuild the docker container, e.g. when...
