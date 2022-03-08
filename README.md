@@ -1,11 +1,13 @@
 # Dagster Pipeline Example
 
+> *Technical blog post coming soon™!*
+
 A boilerplate for creating data pipelines using Dagster, Docker, and Poetry. To use this repo, fork it and follow the instructions below
 ## Features
 * **Picks up code changes immediately** (just hit `Reload` in dagit; don't have to restart the container!)
 * **Unified Dockerfile for development & deployment; easily integrates with CI/CD processes**
 * **Packages the source code according to PEP517 & PEP518**
-* **Tractable package management. No more hideous `pip freeze > requirements.txt`**
+* **Tractable package management using `poetry`**. No more hideous `pip freeze > requirements.txt`!
 # Setup (using a container)
 
 ## Build and Run Dagster
