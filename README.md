@@ -1,8 +1,6 @@
 # Dagster Pipeline Example
 
-> *Technical blog post coming soon™!*
-
-A boilerplate for creating data pipelines using Dagster, Docker, and Poetry. To use this repo, clone it or click "[Use this template](https://github.com/MileTwo/dagster-example-pipeline/generate)" and follow the instructions below
+A boilerplate for creating data pipelines using Dagster, Docker, and Poetry. To use this repo, clone it or click "[Use this template](https://github.com/MileTwo/dagster-example-pipeline/generate)" and follow the instructions below. A detailed explanation of how this repo is structured can be found in the [companion blog post here](https://dev.to/alexserviceml/developing-in-dagster-2flh)
 ## Features
 * **Picks up code changes immediately** (just hit `Reload` in dagit; don't have to restart the container!)
 * **Unified Dockerfile for development & deployment; easily integrates with CI/CD processes**
@@ -86,7 +84,7 @@ I leave this as an exercise for the reader and/or the reader's DevOps team :) Th
 * You don't need to target a specific stage in the Dockerfile; the end result is a Dagster User Code Deployment in a ready-to-use container
 * If using helm, make sure you've added the correct container version to the list of User Code Deployments; don't forget to apply any secrets/env vars as needed
 
-## How Can I Debug My Op (or other functions)
+## How Can I Debug My Op (or other functions)?
 Use `debugpy` (already installed). In `docker-compose.yml`, add `- "5678:5678"` to the list of ports. In the actual op you'd like to debug, add the following three lines:
 ``` python
 # It's very important that we specify both address and port!
